@@ -1,3 +1,5 @@
-export default function Home() {
-  return <main>Admin Panel</main>;
+import { redirect } from 'next/navigation'
+
+export default function Page() {
+  redirect('/dashboard')
 }
