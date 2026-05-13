@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 const PROTECTED_PATHS = ['/dashboard']
-const AUTH_PATHS = ['/sign-in']
+const AUTH_PATHS = ['/sign-in', '/sign-up']
 
 const hasSupabaseAuthCookie = (request: NextRequest) => {
   return request.cookies.getAll().some((cookie) => {
