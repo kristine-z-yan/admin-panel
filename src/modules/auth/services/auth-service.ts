@@ -43,6 +43,19 @@ export const signIn = async (email: string, password: string) => {
   })
 }
 
+export const signUp = async (email: string, password: string) => {
+  const { client, error } = getClientOrError()
+
+  if (!client) {
+    return { data: { user: null, session: null }, error }
+  }
+
+  return client.auth.signUp({
+    email,
+    password,
+  })
+}
+
 export const signOut = async () => {
   const { client, error } = getClientOrError()
 
